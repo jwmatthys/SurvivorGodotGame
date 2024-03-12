@@ -1,0 +1,32 @@
+[gd_scene load_steps=10 format=3 uid="uid://iaqlvg15dcjr"]
+
+[ext_resource type="Texture2D" uid="uid://doun3uiw4t08t" path="res://scenes/game_object/health_vial/green_bottle.png" id="1_ghlko"]
+[ext_resource type="Script" path="res://scenes/game_object/health_vial/health_vial.gd" id="1_h2r0b"]
+[ext_resource type="PackedScene" uid="uid://bml12q0pe5ltb" path="res://scenes/component/random_stream_player_2d_component.tscn" id="3_cmftq"]
+[ext_resource type="AudioStream" uid="uid://bmdkqk3yisnsc" path="res://assets/audio/impactGeneric_light_000.ogg" id="4_64v7x"]
+[ext_resource type="AudioStream" uid="uid://d0pn37oirb4pc" path="res://assets/audio/impactGeneric_light_001.ogg" id="5_wjj2f"]
+[ext_resource type="AudioStream" uid="uid://dcrf6tg78geu6" path="res://assets/audio/impactGeneric_light_002.ogg" id="6_1ebih"]
+[ext_resource type="AudioStream" uid="uid://b4kvav7cyfl6q" path="res://assets/audio/impactGeneric_light_003.ogg" id="7_sx3j6"]
+[ext_resource type="AudioStream" uid="uid://cqvlavnkeupor" path="res://assets/audio/impactGeneric_light_004.ogg" id="8_bxbm8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0m2or"]
+radius = 12.0
+
+[node name="HealthVial" type="Node2D"]
+script = ExtResource("1_h2r0b")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_0m2or")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("1_ghlko")
+
+[node name="RandomStreamPlayer2dComponent" parent="." instance=ExtResource("3_cmftq")]
+stream = ExtResource("4_64v7x")
+streams = Array[AudioStream]([ExtResource("4_64v7x"), ExtResource("5_wjj2f"), ExtResource("6_1ebih"), ExtResource("7_sx3j6"), ExtResource("8_bxbm8")])

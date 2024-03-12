@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://df44tsga36po7"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_bx3vd"]
+
+[resource]
+script = ExtResource("1_bx3vd")
+id = "axe_rate"
+max_quantity = 0
+name = "Axe Cooldown"
+description = "Decrease axe cooldown by 10%"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjrautc2d2ybb"]
+
+[ext_resource type="AudioStream" uid="uid://1q5xh0sxcuhc" path="res://assets/audio/werewolf.ogg" id="1_yhog1"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_yhog1")
+volume_db = -6.0
+autoplay = true
+bus = &"music"

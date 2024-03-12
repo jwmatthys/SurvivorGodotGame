@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=3 format=3 uid="uid://jogy3ygubwii"]
+
+[ext_resource type="PackedScene" uid="uid://d1211j0l0k5tb" path="res://scenes/ability/axe_ability_controller/axe_ability_controller.tscn" id="1_2bl7a"]
+[ext_resource type="Script" path="res://resources/upgrades/ability.gd" id="2_ycuq2"]
+
+[resource]
+script = ExtResource("2_ycuq2")
+ability_controller_scene = ExtResource("1_2bl7a")
+id = "move_speed"
+max_quantity = 5
+name = "Movement Speed"
+description = "Increase the player's movement speed."
